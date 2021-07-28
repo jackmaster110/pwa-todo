@@ -1,0 +1,51 @@
+@import "./globals.scss";
+@import "~react-md/dist/react-md";
+
+@include react-md-utils;
+
+body {
+    background-color: $white;
+
+    .todo-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+
+        .todo-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            max-width: 230px;
+            padding: 4px 15px;
+
+            background-color: $light-blue;
+            border-radius: 3px;
+
+            p,
+            h3 {
+                padding: 0;
+                margin: 6px 0;
+            }
+
+            footer {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            &.add-item {
+
+                input, textarea {
+                    background-color: $light-blue;
+                    border: 0;
+                    resize: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
