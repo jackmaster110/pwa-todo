@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/pwa-todo/static/css/main.a1897209.chunk.css",
+    "main.js": "/pwa-todo/static/js/main.0de63a0c.chunk.js",
+    "main.js.map": "/pwa-todo/static/js/main.0de63a0c.chunk.js.map",
+    "runtime-main.js": "/pwa-todo/static/js/runtime-main.6def58f1.js",
+    "runtime-main.js.map": "/pwa-todo/static/js/runtime-main.6def58f1.js.map",
+    "static/js/2.029a7152.chunk.js": "/pwa-todo/static/js/2.029a7152.chunk.js",
+    "static/js/2.029a7152.chunk.js.map": "/pwa-todo/static/js/2.029a7152.chunk.js.map",
+    "static/js/3.f844ab2a.chunk.js": "/pwa-todo/static/js/3.f844ab2a.chunk.js",
+    "static/js/3.f844ab2a.chunk.js.map": "/pwa-todo/static/js/3.f844ab2a.chunk.js.map",
+    "index.html": "/pwa-todo/index.html",
+    "service-worker.js": "/pwa-todo/service-worker.js",
+    "service-worker.js.map": "/pwa-todo/service-worker.js.map",
+    "static/css/main.a1897209.chunk.css.map": "/pwa-todo/static/css/main.a1897209.chunk.css.map",
+    "static/js/2.029a7152.chunk.js.LICENSE.txt": "/pwa-todo/static/js/2.029a7152.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6def58f1.js",
+    "static/js/2.029a7152.chunk.js",
+    "static/css/main.a1897209.chunk.css",
+    "static/js/main.0de63a0c.chunk.js"
+  ]
+}
