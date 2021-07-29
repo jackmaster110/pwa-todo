@@ -2,7 +2,7 @@ import React from "react";
 import { Layout, useLayoutNavigation } from 'react-md';
 import { useLocation, Link } from "react-router-dom";
 import App from "./App";
-import NavTree, { navTree } from "./navTree";
+import { navTree } from "./navTree";
 
 function MyLayout(): React.ReactElement {
     const { pathname } = useLocation();
@@ -20,7 +20,6 @@ function MyLayout(): React.ReactElement {
             treeProps={useLayoutNavigation(navTree, pathname, Link)}
         >
             <App />
-            <NavTree />
         </Layout>
     );
 }

@@ -3,7 +3,7 @@ import { nanoid } from "nanoid";
 import { Route, Switch, useLocation } from "react-router-dom";
 import AddList from "./Components/AddList";
 import TodoList, { TodoListType } from "./Components/TodoList";
-import { addToNavTree } from "./navTree";
+import NavTree, { addToNavTree } from "./navTree";
 
 function App() {
     const [todoLists, setTodoLists] = useState<TodoListType[]>([
@@ -33,13 +33,16 @@ function App() {
     }, []);
 
     useEffect(() => {
-        localStorage.setItem("data", JSON.stringify({
-          todoLists: todoLists,
-          currentTitle: currentTitle,
-          currentDesc: currentDesc,
-          currentListTitle: currentListTitle,
-          currentLastPath: currentLastPath
-        }))
+        localStorage.setItem(
+            "data",
+            JSON.stringify({
+                todoLists: todoLists,
+                currentTitle: currentTitle,
+                currentDesc: currentDesc,
+                currentListTitle: currentListTitle,
+                currentLastPath: currentLastPath,
+            })
+        );
     });
 
     const doTitleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -102,6 +105,7 @@ function App() {
 
     return (
         <div className="app-container">
+            <NavTree />
             <Switch>
                 <Route exact path="/" component={Home} />
                 {todoLists.map((todoList) => {
