@@ -20,3 +20,9 @@ export const navTree: LayoutNavigationTree = {
     "/list1": createRoute("/list1", "List 1", <MdList />),
     "/add": createRoute("/add", "Add List", <MdNoteAdd />),
 };
+
+export const addToNavTree = (path: string, title: string) => {
+  navTree[path] = createRoute(path, title, <MdList />);
+  delete navTree["/add"];
+  navTree["/add"] = createRoute("/add", "Add List", <MdNoteAdd />);
+};

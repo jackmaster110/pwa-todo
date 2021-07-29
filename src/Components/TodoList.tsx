@@ -1,12 +1,13 @@
 import React from "react";
 import AddItem from "./AddItem";
-import TodoItem, { TodoItemProps } from "./TodoItem";
+import TodoItem, { TodoItemType } from "./TodoItem";
 
 interface TodoHandlers {
     list: {
         doDescChange: (event: React.ChangeEvent<HTMLTextAreaElement>) => void;
         doTitleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
         doClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
+        doCheckboxChange: (event: React.MouseEvent<HTMLInputElement>, id: string) => void;
     };
 }
 
@@ -14,14 +15,14 @@ export type TodoListType = {
     path: string,
     id: string,
     title: string,
-    list: TodoItemProps[]
+    list: TodoItemType[]
 }
 
 export type TodoListProps = {
     path: string;
     id: string;
     title: string;
-    list: TodoItemProps[];
+    list: TodoItemType[];
     functions: TodoHandlers;
 };
 
@@ -35,6 +36,7 @@ function TodoList(props: TodoListProps) {
                         title={item.title}
                         desc={item.desc}
                         checked={item.checked}
+                        changeChecked={props.functions.list.doCheckboxChange}
                     />
                 );
             })}
