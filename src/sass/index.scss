@@ -32,6 +32,14 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+
+                .icon {
+                    color: $delete-button;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
 
             &.add-item {
