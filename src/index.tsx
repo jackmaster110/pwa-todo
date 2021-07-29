@@ -4,7 +4,7 @@ import "./sass/index.scss";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import MyLayout from "./Layout";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import { Configuration } from "react-md";
 
 ReactDOM.render(
