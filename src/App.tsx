@@ -103,6 +103,24 @@ function App() {
         console.log(temp);
     };
 
+    const deleteItem = (event: React.MouseEvent<SVGElement>, id: string) => {
+        var temp = todoLists;
+        var tempList: TodoListType | undefined;
+        temp.forEach((todoList) => {
+            todoList.list.forEach((item) => {
+                if (item.id === id) {
+                    tempList = todoList;
+                }
+            });
+        });
+
+        if (tempList) {
+            tempList.list = tempList.list.filter((item: any) => item.id !== id);
+            temp.filter((list) => list.id === tempList?.id);
+            setTodoLists(temp);
+        }
+    };
+
     return (
         <div className="app-container">
             <NavTree />
@@ -125,6 +143,7 @@ function App() {
                                             doDescChange: doDescChange,
                                             doClick: doAddTodo,
                                             doCheckboxChange: checkboxChange,
+                                            doDeleteItem: deleteItem,
                                         },
                                     }}
                                 />

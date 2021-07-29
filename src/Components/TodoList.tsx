@@ -8,6 +8,7 @@ interface TodoHandlers {
         doTitleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
         doClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
         doCheckboxChange: (event: React.MouseEvent<HTMLInputElement>, id: string) => void;
+        doDeleteItem: (event: React.MouseEvent<SVGElement>, id: string) => void;
     };
 }
 
@@ -37,6 +38,7 @@ function TodoList(props: TodoListProps) {
                         desc={item.desc}
                         checked={item.checked}
                         changeChecked={props.functions.list.doCheckboxChange}
+                        deleteItem={props.functions.list.doDeleteItem}
                     />
                 );
             })}
