@@ -104,17 +104,17 @@ function App() {
         <div className="app-container">
             <Switch>
                 <Route exact path="/" component={Home} />
-                {todoLists.map((todo) => {
+                {todoLists.map((todoList) => {
                     return (
                         <Route
-                            path={todo.path}
+                            path={todoList.path}
                             render={(props) => (
                                 <TodoList
                                     {...props}
-                                    path={todo.path}
-                                    id={todo.id}
-                                    title={todo.title}
-                                    list={todo.list}
+                                    path={todoList.path}
+                                    id={todoList.id}
+                                    title={todoList.title}
+                                    list={todoList.list}
                                     functions={{
                                         list: {
                                             doTitleChange: doTitleChange,
